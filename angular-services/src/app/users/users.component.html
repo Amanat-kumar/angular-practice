@@ -1,0 +1,11 @@
+<p>users works!</p>
+
+<button><a routerLink="2/amanat/user" [queryParams]="{search : 'Leela'}" [fragment]="'loading'">Get amanat details</a></button>
+<br>
+<button><a routerLink="3/leela3/user" [queryParamsHandling]="'preserve'" [fragment]="'loading2'">Get Leela3 details</a></button>
+
+<hr>
+<h4>data from users into user</h4>
+<hr>
+
+<router-outlet></router-outlet>
