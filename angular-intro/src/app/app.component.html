@@ -1,0 +1,10 @@
+<h1 [ngStyle]="{color : hColor}">main app</h1>
+
+<hr>
+
+<custom-component></custom-component>
+
+<hr>
+
+<!-- sending data to child component -->
+<app-structural-directive [parentData]="'orange'" (childData)="getHC($event)"></app-structural-directive>

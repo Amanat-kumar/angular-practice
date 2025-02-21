@@ -1,0 +1,38 @@
+<p style="font-size: 30px;" [ngStyle]="{color : parentData}">StructuralDirectiveComponent</p>
+
+<ul type="none">
+    <li *ngFor="let color of colors">
+        <button (click)="changeColor(color)">{{color}}</button>
+    </li>
+</ul>
+
+<div [ngStyle]="{color : currentColor}" [ngClass]="'font1'">color changes</div>
+
+<br>
+
+<!-- one way binding -->
+<div>
+    <input type="text" [value]="intpuV" (keyup)="printV($event)" #inV>
+</div>
+
+<br>
+
+<!-- two way binding -->
+
+<div>
+    <input type="text" [(ngModel)]="inputVTwoWay">
+    <p *ngIf="inputVTwoWay!==''; else elseP">inputVTwoWay : {{inputVTwoWay}}</p>
+    <ng-template #elseP>
+        <p>inputVTwoWay : empty</p>
+    </ng-template>
+</div>
+
+<h1> structral diractive ngSwitch</h1>
+<div *ngSwitch="switchValue">
+    <div *ngSwitchCase="1"> case 1</div>
+    <div *ngSwitchCase="5">case 5</div>
+    <div *ngSwitchDefault>ngSwitchDefault</div>
+  </div>
+  
+
+
