@@ -1,0 +1,21 @@
+<h1 [ngClass]="logInService.isLoggedIn? 'login' : 'logout'">app-component routers</h1>
+
+<hr>
+
+<div class="menu">
+    <div style="border-right: 5px green solid;">
+        <h2>Menu</h2>
+        <button (click)="logIn()">LogIn</button> <button (click)="logOut()">LogOut</button>
+        <hr>
+        <button><a routerLink="/" [routerLinkActive]="'activeLink'" [routerLinkActiveOptions]="{exact : true}">Home</a></button>
+        <br>
+        <button><a (click)="goToUserComponent()" [routerLinkActive]="'activeLink'">Users</a></button>
+        <br>
+        <!-- property binding -->
+        <button><a [routerLink]="['/1/leela/edit']" [routerLinkActive]="'activeLink'">Edit User</a></button>
+    </div>
+    <div>
+        <h2>other components</h2>
+        <router-outlet></router-outlet>
+    </div>
+</div>
