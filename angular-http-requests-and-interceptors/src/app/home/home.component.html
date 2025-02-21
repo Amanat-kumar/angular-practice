@@ -1,0 +1,27 @@
+<p>home works!</p>
+
+<h3>User List From API</h3>
+<input type="text" placeholder="Seacrh" (input)="onSearch($event)"> <button>SEARCH</button>
+<br>
+<hr>
+<div> Total : <strong>{{pagination.total}} | </strong>Skip : <strong>{{pagination.skip}} | </strong> Limit : <strong>{{pagination.limit}}</strong></div>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>NAME</td>
+        <td>AGE</td>
+        <td>EMAIL</td>
+        <td>IMAGE</td>
+        <td>ACTION</td>
+    </tr>
+    <tr *ngFor=" let user of users" cellpadding>
+        <td>{{user.id}}</td>
+        <td>{{user.firstName + ' ' + user.lastName}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.email | shortenString:10}}</td>
+        <td ><img [src]="user.image" alt="user.image" style="width: 30px;height: 30px;"></td>
+        <td><button>Delete</button></td>
+
+    </tr>
+</table>
+
