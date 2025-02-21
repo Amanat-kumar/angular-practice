@@ -1,0 +1,40 @@
+/* app.component.css */
+.container {
+    display: flex;
+    min-height: 100vh;  /* Ensure full height of the screen */
+  }
+  
+  .sidebar {
+    width: 150x; /* Fixed width for the sidebar */
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .sidebar a:hover {
+    color: #007bff;
+  }
+  
+  .content {
+    flex-grow: 1;  /* Take remaining space */
+    padding: 20px;
+  }
+  
+  .active {
+    font-weight: bold;
+    background-color: #92bff0;
+  }
+  

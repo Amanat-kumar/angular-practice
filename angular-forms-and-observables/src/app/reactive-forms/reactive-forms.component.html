@@ -1,0 +1,31 @@
+<h2>reactive-forms works</h2>
+<hr>
+
+<button (click)="fillUserFromValues()">Fill User Values</button>
+
+<br>
+<br>
+
+<form (ngSubmit)="onFormSubmit()" [formGroup]="userForm">
+    <label for="name">Enter Name : </label>
+    <input type="text" id="name" formControlName="name">
+
+    <br>
+    <br>
+    
+    <div formGroupName="userEmail">
+        <label for="email">Enter Email :</label>
+        <input type="email" id="email" formControlName="email">
+    </div>
+
+    <br>
+
+    <div *ngFor="let gender of genders">
+        <label [for]="gender">
+            <input type="radio" formControlName="gender" [id]="gender">{{gender}}
+        </label>
+    </div>
+
+    <br>
+    <button type="submit">submit</button>
+</form>

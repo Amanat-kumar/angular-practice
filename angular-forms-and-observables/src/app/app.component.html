@@ -1,0 +1,25 @@
+<h2>App-Component</h2>
+
+<h3>custom shoertenPipe {{'shorten pipe testing' | shortenPipe:3}}</h3>
+<h3>{{'uppercasepipe' | uppercase}}</h3>
+<h3>{{'lowercasepipe' | lowercase}}</h3>
+<h3>currencyPipe {{1235.64 | currency:'USD'}}</h3>
+
+
+<!-- app.component.html -->
+<div class="container">
+  <!-- Left section for links -->
+  <div class="sidebar">
+    <ul>
+      <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+      <li><a routerLink="obervables-page" routerLinkActive="active">observales-page</a></li>
+      <li><a routerLink="/template-forms" routerLinkActive="active">template-forms</a></li>
+      <li><a routerLink="/reactive-forms" routerLinkActive="active">reactive-forms</a></li>
+    </ul>
+  </div>
+
+  <!-- Right section for the router-outlet -->
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
