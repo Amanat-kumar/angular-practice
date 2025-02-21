@@ -1,0 +1,9 @@
+<div style="background-color: bisque;" *ngIf="userService.userListService.length!=0">
+    <h3>users-component</h3>
+
+    <h4>users list from user</h4>
+    <ul *ngFor="let user of userService.userListService; let userId=index">
+        <li>{{user}} &nbsp; <button (click)="removeUser(userId)">delete</button></li>
+    </ul>
+    <ng-content></ng-content>
+</div>

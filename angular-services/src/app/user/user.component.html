@@ -1,0 +1,10 @@
+<div style="background-color: aquamarine;">
+    <h3>user-component</h3>
+
+    <legend>Enter User Name : </legend>
+    <input type="text" [(ngModel)]="user" #userNameInput>
+
+    <br>
+
+    <button (click)="addUser(user)">add user</button>
+</div>
